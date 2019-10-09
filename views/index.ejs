@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link id="favicon" rel="shortcut icon" type="image/png" href="/favicon/favicon-01.png">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125959347-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-125959347-1');
+    </script>
+    <meta name="google-site-verification" content="ym8xb6GgrWc1p4BEoMmchKpKzEeujeemXkzLWiy0rPw">
+    <meta name="google-site-verification" content="AqMsgz9k1RhyJHKBvL4lnXj9lWCNwFncAnuuuBNdIL0">
+    <meta name="author" content="Felipe Galaz, felipe@galaz.de">
+    <title>Satoshing | The Bitcoin Roulette</title>
+    <meta name="description" content="Gambling Bitcoin Roulette consisting on guess the last digit of the block hash on wich your bet will be included. Nobody knows that number until it is discovered by bitcoin miners and inmediatly propagated all over the world to everyone to know.">
+    <meta charser="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <html xmlns="http://www.w3.org/1999/xhtml"></html>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width: 330px)" href="iphone5.css">
+    <link rel="stylesheet" media="screen and (min-width: 331px) and (max-width: 385px)" href="iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 386px) and (max-width: 715px)" href="iphone7plus.css">
+    <link rel="stylesheet" media="screen and (min-width: 716px) and (max-width: 993px)" href="ipad.css">
+    <link rel="stylesheet" media="screen and (min-width: 994px) and (max-width: 1199px) and (max-height: 700px)" href="1440x900short.css">
+    <link rel="stylesheet" media="screen and (min-width: 994px) and (max-width: 1199px) and (min-height: 701px)" href="1440x900.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px) and (max-height: 700px)" href="1920x1080short.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px) and (min-height: 701px)" href="1920x1080.css">
+    <link rel="stylesheet" media="screen and (min-width: 376px) and (max-width: 812px) and (max-height: 375px) and (orientation : landscape)" href="iphoneXlandscape.css">
+    <link href="https://fonts.googleapis.com/css?family=Tauri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  </head>
+  <body>
+    <h1>The Bitcoin roulette - Probably fair - 15x Prices</h1>
+    <h2>Bitcoin BCH casino</h2>
+    <div class="deployed" id="cortina"></div>
+    <div class="short" id="container-12">
+      <div class="row total">
+        <div class="col-3 one">
+          <div class="blocks">
+            <div class="spinner"></div>
+            <div class="spinner1"></div>
+            <div class="spinner2"></div>
+            <div class="box">
+              <div class="block">
+                <p class="lasthash">HASH</p>
+                <p class="hashblockbox" id="hash"> </p>
+                <p class="lastheight">HEIGHT</p>
+                <p class="height" id="height"> </p>
+                <p class="tconfs">CONFIRMATIONS</p>
+                <p class="confs" id="confs"> </p>
+                <p class="tblocktime">BLOCK TIME</p>
+                <p class="blocktime time0" id="time0"></p>
+                <p class="blocktime confs1" id="confs1"></p>
+                <div class="blockback"></div>
+                <div class="off" id="questions">
+                  <div class="q one">
+                    <p>I HAVE SENT A BET TO THE GENERATED ADDRESS BUT IT DOES NOT APPEAR AS INCOMING TRANSACTION</p>
+                  </div>
+                  <div class="q two">
+                    <p>I CAN NOT FIND MY TRANSACTION ON THE TRANSACTION TRACKER</p>
+                  </div>
+                  <div class="q three">
+                    <p>MY BET IS CONFIRMED AND I WON BUT I HAVE NOT RECEIVED ANY TRANSACTION ON MY WALLET</p>
+                  </div>
+                  <div class="q four">
+                    <p>CAN I BET TO MULTIPLE GENERATED ADDRESSES ON ONE SINGLE TRANSACTION?</p>
+                  </div>
+                  <div class="q five">
+                    <p>CAN I SEND MULTIPLE TRANSACTIONS TO A SINGLE GENERATED ADDRESS?</p>
+                  </div>
+                  <div class="q six">
+                    <p>IS THERE A MINIMUM AMOUNT TO BET?    </p>
+                  </div>
+                  <div class="q seven">
+                    <p>IS THERE A MAXIMUM AMOUNT TO BET?</p>
+                  </div>
+                  <div class="q eight">
+                    <p>IS IT POSSIBLE TO BET A CRYPTOCURRENCY OTHER THAN BITCOIN CASH?</p>
+                  </div>
+                </div>
+                <div id="answer">
+                  <div class="a one apa">
+                    <p>I HAVE SENT A BET TO THE GENERATED ADDRESS BUT IT DOES NOT APPEAR AS INCOMING TRANSACTION</p>
+                    <p>SOME BROWSERS NEED TO BE FOCUSED TO DISPLAY INCOMING TRANSACTIONS. PLEASE USE THE TRANSACTION TRACKER TO FIND YOUR BET.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a two apa">
+                    <p>I CAN NOT FIND MY TRANSACTION ON THE TRANSACTION TRACKER</p>
+                    <p>WAIT SOME INSTANTS AFTER SENDING A TRANSACTION AND MAKE SURE YOU ARE TYPING THE HASH PROPERLY.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a three apa">
+                    <p>MY BET IS CONFIRMED AND I WON BUT I HAVE NOT RECEIVED ANY TRANSACTION ON MY WALLET</p>
+                    <p>YOUR PRICE WILL BE SENT AS SOON AS YOUR TRANSACTION REACH 3 CONFIRMATIONS. CHECK YOUR TRANSACTION HASH ON THE TRANSACTION TRACKER TO SEE THE STATUS OF YOUR BET.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a four apa">
+                    <p>CAN I BET TO MULTIPLE GENERATED ADDRESSES ON ONE SINGLE TRANSACTION?</p>
+                    <p>SURE. HOWEVER, YOU WILL NOT BE ABLE TO TRACK YOUR BETS ON THE TRANSACTION TRACKER SEPARATELY. THE TRANSACTION TRACKER WILL ONLY SHOW YOU THE LAST BET ON YOUR TRANSACTION, AND YOU WILL NEED TO VISIT BLOCKCHAIR.COM IF YOU WANT TO SEE YOUR TRANSACTION DETAILS.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a five apa">
+                    <p>CAN I SEND MULTIPLE TRANSACTIONS TO A SINGLE GENERATED ADDRESS?</p>
+                    <p>OF COURSE. </p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a six apa">
+                    <p>IS THERE A MINIMUM AMOUNT TO BET?    </p>
+                    <p>THERE IS AND IT WILL SHOW UP ON AN ALERT ALONG WITH THE GENERATED ADDRESS. CURRENTLY 0.0001 BCH. IF YOU PLAY BELLOW THAT AMOUNT YOUR BET WILL BE INVALID AND CONSIDERED AS A DONATION.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a seven apa">
+                    <p>IS THERE A MAXIMUM AMOUNT TO BET?</p>
+                    <p>THERE IS AND IT WILL SHOW UP ON AN ALERT ALONG WITH THE GENERATED ADDRESS. CURRENTLY 0.01 BCH. IF YOU PLAY ABOVE THAT AMOUNT YOUR BET WILL BE INVALID AND REFUNDED TO YOU AFTER 10 CONFIRMATIONS. A 10% PROCESSING FEE WILL APPLY.</p>
+                    <p class="close">&#215;</p>
+                  </div>
+                  <div class="a eight apa">
+                    <p>IS IT POSSIBLE TO BET A CRYPTOCURRENCY OTHER THAN BITCOIN CASH?</p>
+                    <p>NO. ANY OTHER CURRENCY YOU SEND TO THE GENERATED ADDRESS WILL BE LOST FOREVER. SO PLEASE DON'T. </p>
+                    <p class="close">&#215;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="spinner spinner-1">
+              <div id="winner"></div>
+              <div class="Text">
+                <h4 id="bajada">LAST BLOCK</h4>
+              </div>
+            </div>
+            <div class="spinner1 spinner1-1">
+              <div id="winner1"></div>
+              <div class="Text">
+                <h4 id="bajada">PREVIOUS BLOCK</h4>
+              </div>
+            </div>
+            <div class="spinner2 spinner2-1">
+              <div id="winner2"></div>
+              <div class="Text">
+                <h4 id="bajada">LAST CONFIRMED BLOCK</h4>
+              </div>
+            </div>
+            <div class="flechas">
+              <div class="arrowleft"></div>
+              <div class="arrowright"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="sel">
+            <p>SELECT UP TO 8 DIGITS</p>
+          </div>
+          <div class="alerta0">
+            <div class="alerta1">
+              <p>
+                WHEN YOU PLAY THIS COMBINATION THE DIGIT (0)
+                IS OUT OF THE GAME MEANING<br>THAT IF (0)
+                IS THE LAST DIGIT OF THE BLOCKHASH YOU WILL GET YOUR BET BACK<br>
+              </p>
+            </div>
+          </div>
+          <div class="alerta8">
+            <div class="alerta1">
+              <p>
+                WHEN YOU PLAY THIS COMBINATION THE DIGIT (8)
+                IS OUT OF THE GAME MEANING<br>THAT IF (8)
+                IS THE LAST DIGIT OF THE BLOCKHASH YOU WILL GET YOUR BET BACK<br>
+              </p>
+            </div>
+          </div>
+          <div class="lefty">
+            <div class="details">
+              <div class="ticket one">
+                <p id="numeros1"></p>
+              </div>
+              <div class="ticket two">
+                <p id="numeros2"></p>
+              </div>
+              <div class="ticket three">
+                <p id="numeros3"></p>
+              </div>
+              <div class="ticket four">
+                <p id="numeros4"></p>
+              </div>
+              <div class="ticket five">
+                <p id="numeros5"></p>
+              </div>
+              <div class="ticket six">
+                <p id="numeros6"> </p>
+              </div>
+              <div class="ticket seven">
+                <p id="numeros7"></p>
+              </div>
+              <div class="ticket eight">
+                <p id="numeros8"> </p>
+              </div>
+              <div class="pozo">
+                <p id="spanoferta"></p>
+              </div>
+              <div class="dtlsinfo">
+                <p>If any of the digits above match the last digit of the block hash on which your bet is included, you will get the amount of your bet multiplied by the factor.</p>
+              </div>
+              <div class="thisis">
+                <p>THIS IS YOUR TICKET</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="off" id="button">
+        <p class="bety"><span id="address">BET!</span></p>
+      </div>
+    </div>
+    <div class="alert1">
+      <div class="alert">
+        <p class="bch">BITCOIN CASH (BCH) ONLY</p>
+        <p class="xxx">
+          PRIZES WILL BE PAID ON ADDRESS THE BET WAS MADE FROM. DO NOT BET DIRECTLY
+           FROM EXCHANGES, ONLINE WALLETS OR ANY OTHER WALLET YOU DON'T CONTROL THE PRIVATE KEYS<br>
+        </p>
+        <p class="zzz">MINIMUM BET : 0.0001 BCH  |  MAXIMUM BET : 0.01 BCH</p>
+      </div>
+    </div>
+    <div class="short" id="faqs">
+      <p>FAQS</p>
+    </div>
+    <div class="left">
+      <div class="search">
+        <div class="tx">
+          <div class="tittle">
+            <p>INCOMING BETS</p>
+          </div>
+          <div class="tiones" id="tiones"></div>
+          <div class="transa">
+            <div class="ihash"></div>
+            <div class="hashtitle">
+              <p>BET</p>
+            </div>
+            <div class="hashdata">
+              <p>&nbsp;</p>
+            </div>
+            <div class="iblock"></div>
+            <div class="hashblocktittle">
+              <p>BLOCK</p>
+            </div>
+            <div class="blockhashdata">
+              <p>&nbsp;</p>
+            </div>
+            <div class="cuartafila">
+              <div class="ticketa">
+                <p>TICKET</p>
+              </div>
+              <div class="numbers">
+                <p>&nbsp;</p>
+              </div>
+              <div class="amount">
+                <p>AMOUNT</p>
+              </div>
+              <div class="amountdata">
+                <p>&nbsp;</p>
+              </div>
+              <div class="prize">
+                <p>PRIZE</p>
+              </div>
+              <div class="prizenumbers">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="istatus"></div>
+            <div class="status click">
+              <p>PAID</p>
+            </div>
+            <div class="pago click">
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="barra">
+          <input type="text" autocomplete="off" placeholder="TYPE YOUR BET HASH UNTIL IT'S MATCHED..." spellcheck="false">
+        </div>
+        <div class="totalb">
+          <div class="totalbets">TOTAL WAGERED</div>
+          <div class="cifra" id="wagered"></div>
+        </div>
+        <div class="totalw">
+          <div class="totalbets">TOTAL BETS</div>
+          <div class="cifra" id="totalbets"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="columna">
+      <div class="col uno">
+        <table class="logo">
+          <tr>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+          </tr>
+          <tr>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+          </tr>
+          <tr>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td></td>
+            <td class="negro"></td>
+            <td class="negro"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="welcome">
+        <p class="welcome1">WELCOME TO SATOSHING...</p>
+        <p class="welcome2">SATOSHING IS A GAMBLING ROULETTE GAME CONSISTING ON GUESS THE LAST DIGIT </br> OF THE BLOCK HASH ON WHICH YOUR TRANSACTION WILL BE INCLUDED...</p>
+        <p class="welcome3">IF THAT DIGIT IS BETWEEN THOSE YOU HAVE SELECTED, YOUR BET WILL<br> BE MULTIPLIED BY THE WINNER FACTOR AND SENT BACK TO YOU...</p>
+        <p class="welcome4">NO REGISTRATION IS REQUIRED. JUST SELECT YOUR NUMBER(S) <br> AND CLICK ON THE BET BUTTON TO PLAY.</p>
+        <p class="welcome5">HAVE A LUCKY SATOSHING <span>&#x263a;<span></p><span class="flecha">&#10142;</span><span class="flecha1">&#10142;</span><span class="flecha2">&#10142;</span><span class="flecha3">&#10142;</span><span class="flecha4">&#x2713;</span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div id="twittercircle"></div>
+      <div id="twitter"><i class="fab fa-twitter"></i></div>
+    </div>
+    <div class="row mesa">
+      <div class="col juego">
+        <div class="mx-auto" id="qr"></div>
+      </div>
+    </div>
+    <div class="row mesa">
+      <div class="col juego">
+        <div class="mx-auto" id="exit">
+          <div class="switch p1" id="volver"><span class="espan1">PLAY AGAIN</span></div>
+          <div class="switch p2" id="legacy">
+            <div class="espan2" id="format">LEGACY FORMAT</div>
+          </div>
+          <div class="switch p3" id="copy"><span class="espan2">COPY TO CLIPBOARD</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mesa">
+      <div class="col juego">
+        <table class="mesa">
+          <tr>
+            <th rowspan="4" colspan="2"></th>
+            <td class="color neutro mesa cero" rowspan="4" colspan="21">
+              <div class="bur2 mesa">0</div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <th class="bet red lado" rowspan="10"><span>1 to 1</span></th>
+            <th class="bet rotate lin1 lado" rowspan="4"><span>4 to 1 </span></th>
+            <td class="nocolor color1 lin1 col1 mesa odd uno" rowspan="4" colspan="7">
+              <div class="bur mesa linea1 columna1">1</div>
+            </td>
+            <td class="nocolor color2 lin1 col2 mesa even dos" rowspan="4" colspan="7">
+              <div class="bur mesa linea1 columna2">2</div>
+            </td>
+            <td class="nocolor color1 lin1 col3 mesa odd tres" rowspan="4" colspan="7">
+              <div class="bur mesa linea1 columna3">3</div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <th class="bet rotate lin2 lado" rowspan="4"><span>4 to 1 </span></th>
+            <td class="nocolor color2 lin2 col1 mesa even cuatro" rowspan="4" colspan="7">
+              <div class="bur mesa linea2 columna1">4</div>
+            </td>
+            <td class="nocolor color1 lin2 col2 mesa odd cinco" rowspan="4" colspan="7">
+              <div class="bur mesa linea2 columna2">5</div>
+            </td>
+            <td class="nocolor color2 lin2 col3 mesa even seis" rowspan="4" colspan="7">
+              <div class="bur mesa linea2 columna3">6</div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <th class="bet rotate lin3 lado" rowspan="4"><span>4 to 1  </span></th>
+            <td class="nocolor color1 lin3 col1 mesa odd siete" rowspan="4" colspan="7">
+              <div class="bur mesa linea3 columna1">7</div>
+            </td>
+            <td class="color neutro lin3 col2 mesa ocho" rowspan="4" colspan="7">
+              <div class="bur3 mesa linea3 columna2">8</div>
+            </td>
+            <td class="nocolor color2 lin3 col3 mesa even nueve" rowspan="4" colspan="7">
+              <div class="bur mesa linea3 columna3">9</div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <th class="bet black lado" rowspan="10"><span>1 to 1</span></th>
+          </tr>
+          <tr></tr>
+          <tr>
+            <th class="bet rotate lin4 lado" rowspan="4"><span>4 to 1 </span></th>
+            <td class="nocolor color2 lin4 col1 mesa even a" rowspan="4" colspan="7">
+              <div class="bur mini mesa linea4 columna1">
+                <div class="p">a</div>
+              </div>
+            </td>
+            <td class="nocolor color1 lin4 col2 mesa odd b" rowspan="4" colspan="7">
+              <div class="bur mesa linea4 columna2">b</div>
+            </td>
+            <td class="nocolor color2 lin4 col3 mesa even c" rowspan="4" colspan="7">
+              <div class="bur mini mesa linea4 columna3">
+                <div class="p">c</div>
+              </div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <th class="bet rotate lin5 lado" rowspan="4"><span>4 to 1 </span></th>
+            <td class="nocolor color1 lin5 col1 mesa odd d" rowspan="4" colspan="7">
+              <div class="bur mesa linea5 columna1">d</div>
+            </td>
+            <td class="nocolor color2 lin5 col2 mesa even e" rowspan="4" colspan="7">
+              <div class="bur mini mesa linea5 columna2">
+                <div class="p">e</div>
+              </div>
+            </td>
+            <td class="nocolor color1 lin5 col3 mesa odd f" rowspan="4" colspan="7">
+              <div class="bur mesa linea5 columna3">f</div>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr class="bet">
+            <th class="ran" colspan="2">R</th>
+            <th class="bet col1" colspan="7"><span>2 to 1 </span></th>
+            <th class="bet col2" colspan="7"><span>2 to 1 </span></th>
+            <th class="bet col3" colspan="7"><span>2 to 1 </span></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/jquery-qrcode-0.14.0.min.js"></script>
+    <script src="js/bchaddrjs-0.2.1.min.js"></script>
+  </body>
+</html>

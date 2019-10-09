@@ -1,0 +1,1742 @@
+\:root
+  --color1: null
+  --color2: null
+  --color3: null
+  --color4: null
+  --color5: null
+  --color6: null
+  --color7: null
+  --color8: null
+  --color9: null
+  --colorlogo: white
+  --gris0: null
+  --gris1: null
+  --gris2: null
+  --gris3: null
+  --gris4: null
+  --blanco: white
+  --negro: black
+  --spinner-inner: var(--color3)
+  --x-color: var(--color3)
+  --qr-back: var(--color3)
+  --address: var(--color3)
+  --td-color: var(--gris1)
+  --neutro-color: white
+  --td-op: 0.2
+
+::-webkit-input-placeholder
+  font-family: Consolas, monaco, monospace
+  font-size: 9px
+  font-weight: bold
+  color: white
+  opacity: 0.8
+  padding: 10px
+
+*
+  position: relative
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+  opacity: 1
+
+*:focus
+    outline: none
+
+body
+  font-family: tauri, monospace
+  width: 100%
+  height: 80px
+
+#cortina
+  position: fixed
+  height: 100%
+  width: 100%
+  z-index: 9000
+  background: -webkit-gradient(linear, left bottom, left top, from(#787878), to(#646464))
+  background: -webkit-linear-gradient(bottom, #787878, #646464)
+  background: -o-linear-gradient(bottom, #787878, #646464)
+  background: linear-gradient(to top, #787878, #646464)
+  display: none
+
+.container-12
+  background: -webkit-gradient(linear, left top, right top, from(var(--color1)), to(var(--color2)))
+  background: -webkit-linear-gradient(left, var(--color1), var(--color2))
+  background: -o-linear-gradient(left, var(--color1), var(--color2))
+  background: linear-gradient(to right, var(--color1), var(--color2))
+  height: 100vh
+  .row
+    width: 100vw
+    .col-3.one
+
+      .spinner
+
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        z-index: 10000
+        -webkit-transform-origin: left
+        -ms-transform-origin: left
+        transform-origin: left
+        top: 252px
+        left: 225px
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background-color: var(--gris3)
+        position: absolute
+        margin: 50px
+        display: inline-block
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        &:hover
+          cursor: pointer
+        &:after, &:before
+          content: ''
+          display: block
+          width: 65px
+          height: 65px
+          border-radius: 50%
+        #winner
+          position: absolute
+          color: var(--spinner-inner)
+          font-size: 35px
+          top: 7px
+          left: 24px
+      .spinner-1:after
+        display: block
+        position: absolute
+        top: 0px
+        left: 0px
+        border: 5px solid transparent
+        border-top-color: var(--spinner-inner)
+        border-left-color: var(--spinner-inner)
+        -webkit-animation: spynny 6s linear infinite
+        animation: spynny 6s linear infinite
+        animation: spynny 6s linear infinite
+      .spinner1
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        z-index: 10000
+        -webkit-transform-origin: left
+        -ms-transform-origin: left
+        transform-origin: left
+        top: 252px
+        left: 225px
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background-color: var(--gris3)
+        position: absolute
+        margin: 50px
+        display: none
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        &:hover
+          cursor: pointer
+        &:after, &:before
+          content: ''
+          display: block
+          width: 65px
+          height: 65px
+          border-radius: 50%
+        #winner1
+          position: absolute
+          color: var(--spinner-inner)
+          font-size: 35px
+          top: 7px
+          left: 24px
+      .spinner1-1:after
+        display: block
+        position: absolute
+        top: 0px
+        left: 0px
+        border: 5px solid transparent
+        border-top-color: var(--spinner-inner)
+        border-left-color: var(--spinner-inner)
+        -webkit-animation: spynny 6s linear infinite
+        animation: spynny 6s linear infinite
+      .spinner2
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        z-index: 10000
+        -webkit-transform-origin: left
+        -ms-transform-origin: left
+        transform-origin: left
+        top: 252px
+        left: 225px
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background-color: var(--gris3)
+        position: absolute
+        margin: 50px
+        display: none
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        &:hover
+          cursor: pointer
+        &:after, &:before
+          content: ''
+          display: block
+          width: 65px
+          height: 65px
+          border-radius: 50%
+        #winner2
+          position: absolute
+          color: var(--spinner-inner)
+          font-size: 35px
+          top: 7px
+          left: 24px
+      .spinner2-1:after
+        top: 0px
+        left: 0px
+        display: block
+        position: absolute
+        border: 5px solid transparent
+        border-top-color: var(--spinner-inner)
+        border-bottom-color: var(--spinner-inner)
+        -webkit-animation: spynny 6s linear infinite
+        animation: spynny 6s linear infinite
+      .flechas
+        top: 330px
+        left: 245px
+        opacity: 1
+        -webkit-transform-origin: left
+        -ms-transform-origin: left
+        transform-origin: left
+        display: inline-block
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        position: absolute
+        .arrowleft
+          z-index: 10000
+          border: solid var(--gris2)
+          border-width: 0 3px 3px 0
+          display: inline-block
+          padding: 5px
+          -ms-transform: rotate(135deg)
+          transform: rotate(135deg)
+          -webkit-transform: rotate(135deg)
+          -webkit-transition: 0.4s ease-in-out all
+          -o-transition: 0.4s ease-in-out all
+          transition: 0.4s ease-in-out all
+          position: absolute
+          &:hover
+            cursor: pointer
+        .arrowright
+          z-index: 10000
+          left: 115px
+          border: solid var(--gris2)
+          border-width: 0 3px 3px 0
+          display: none
+          padding: 5px
+          -ms-transform: rotate(-45deg)
+          transform: rotate(-45deg)
+          -webkit-transform: rotate(-45deg)
+          -webkit-transition: 0.4s ease-in-out all
+          -o-transition: 0.4s ease-in-out all
+          transition: 0.4s ease-in-out all
+          position: absolute
+          &:hover
+            cursor: pointer
+      .block
+        user-select: none
+        display: block
+        -webkit-transition: 01s ease-in-out all
+        -o-transition: 01s ease-in-out all
+        transition: 01s ease-in-out all
+      .box
+        user-select: none
+        background-color: transparent
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        text-align: center
+        -webkit-transform-origin: 50% 50%
+        -ms-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        .hashblockbox
+          user-select: none
+          z-index: 10001
+          font-family: Consolas, monospace
+          position: fixed
+          width: 400px
+          height: 20px
+          font-size: 10px
+          background-color: rgba(250,250,250,0.3)
+          color: var(--gris1)
+          left: 5px
+          top: 413px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 21px
+          &:hover
+            cursor: pointer
+        .lasthash
+          user-select: none
+          z-index: 10001
+          background-color: rgba(250,250,250,0.1)
+          font-weight: bold
+          position: fixed
+          width: 400px
+          height: 15px
+          font-size: 9px
+          color: rgba(250,250,250,1)
+          left: 5px
+          top: 398px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 15px
+          &:hover
+            cursor: pointer
+        .height
+          user-select: none
+          font-family: Consolas, monospace
+          position: fixed
+          width: 200px
+          height: 20px
+          background-color: rgba(250,250,250,0.3)
+          color: var(--gris1)
+          font-size: 10px
+
+          left: 5px
+          top: 308px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 21px
+        .lastheight
+          user-select: none
+          background-color: rgba(250,250,250,0.1)
+          font-weight: bold
+          position: fixed
+          width: 200px
+          height: 15px
+          font-size: 9px
+          color: rgba(250,250,250,01)
+          left: 5px
+          top: 293px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 15px
+        .confs
+          user-select: none
+          font-family: Consolas, monospace
+          position: fixed
+          width: 200px
+          height: 20px
+          background-color: rgba(250,250,250,0.3)
+          color: var(--gris1)
+          font-size: 10px
+          left: 5px
+          top: 343px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 21px
+        .tconfs
+          user-select: none
+          font-weight: bold
+          position: fixed
+          width: 200px
+          height: 15px
+          background-color: rgba(250,250,250,0.1)
+          font-size: 9px
+          color: rgba(250,250,250,1)
+          left: 5px
+          top: 328px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 15px
+        .blocktime
+          user-select: none
+          font-family: Consolas, monospace
+          position: fixed
+          width: 200px
+          height: 20px
+          background-color: rgba(250,250,250,0.3)
+          color: var(--gris1)
+          font-size: 10px
+          left: 5px
+          top: 378px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 21px
+        #confs1
+          display: none
+        #time0
+          display: block
+        .tblocktime
+          user-select: none
+          font-weight: bold
+          position: fixed
+
+          width: 200px
+          height: 15px
+          background-color: rgba(250,250,250,0.1)
+          font-size: 9px
+          color: rgba(250,250,250,1)
+          left: 5px
+          top: 363px
+          -webkit-transition: 0.2s ease-in-out all
+          -o-transition: 0.2s ease-in-out all
+          transition: 0.2s ease-in-out all
+          line-height: 15px
+        .blockback
+          z-index: 10000
+          user-select: none
+          width: 410px
+          height: 150px
+          top: 288px
+          border-radius: 3px
+          background-color: rgba(250,250,250,0.15)
+      .Text
+        top: 5px
+        left: 0
+        width: 100%
+        height: 20px
+        h1
+          font-weight: bold
+          font-size: 10px
+          color: var(--gris2)
+          position: absolute
+          top: 25%
+          left: 50%
+          margin-right: 50%
+          -webkit-transform: translate(-50%, -50%)
+          -ms-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+          white-space: nowrap
+        h2
+          font-size: 50px
+          color: var(--gris2)
+          position: absolute
+          top: 65%
+          left: 50%
+          margin-right: 50%
+          -webkit-transform: translate(-50%, -50%)
+          -ms-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+          white-space: nowrap
+        &:hover
+          cursor: auto
+      .lastblock
+        top: 35px
+        height: 200px
+        width: 200px
+      .triangle
+        left: 100px
+        position: absolute
+        z-index: 10000
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 20px 0 0 20px
+        border-color: var(--gris3) transparent transparent transparent
+        -webkit-transform: rotatez(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotatez(45deg)
+        &:hover
+          cursor: pointer
+          left: 20px
+          bottom: -650px
+    .col-6
+      height: 100%
+      line-height: 15px
+      .uno
+        z-index: 9999
+        -webkit-perspective: 600px
+        perspective: 600px
+        table.logo
+          z-index: 19999
+          margin: auto
+          -webkit-transform-origin: bottom
+          -ms-transform-origin: bottom
+          transform-origin: bottom
+          -webkit-transform: rotateX(60deg)
+          transform: rotateX(60deg)
+          -webkit-transform-style: preserve-3d
+          transform-style: preserve-3d
+          width: 12em
+          height: 2em
+          border-spacing: 0
+          opacity: 0.8
+          .negro
+            background: var(--colorlogo)
+            -webkit-box-shadow: 1px 2px var(--gris1)
+            box-shadow: 1px 2px var(--gris1)
+
+    .sel
+      user-select: none
+      top: 270px
+      text-align: center
+      opacity: 0
+      animation: op 6s infinite
+
+      p
+        color: white
+        font-size: 11px
+
+
+    @keyframes op
+      0%
+        opacity: 0
+
+      25%
+        opacity: 1
+
+      50%
+        opacity: 0
+
+
+    .welcome
+      transition: 1s ease-in-out
+      display: block
+      background-color: var(--gris4)
+      border-radius: 2px
+      user-select: none
+      z-index: 10000
+      top: 100px
+      height: 50px
+      width: 500px
+      left: 50%
+      transform: translate(-50%, 0)
+      position: absolute
+      transform-origin: 50% 50%
+      text-align: center
+      opacity: 1
+      p
+        top: 17px
+        font-weight: bold
+        color: rgba(250,250,250,0.7)
+        font-size: 10px
+      .flecha
+        width: fit-content
+        display: block
+        color: rgba(250,250,250,0.7)
+        top: -15px
+        left: 350px
+        text-decoration: none
+        font-size: 30px
+        animation: aw 2s ease-in-out infinite        
+        &:hover
+          cursor: pointer
+
+      .flecha1
+        width: fit-content
+        display: none
+        color: rgba(250,250,250,0.7)
+        top: -30px
+        left: 440px
+        text-decoration: none
+        font-size: 30px
+        animation: aw1 2s ease-in-out infinite        
+        &:hover
+          cursor: pointer
+
+      .flecha2
+        width: fit-content
+        display: none
+        color: rgba(250,250,250,0.7)
+        top: -30px
+        left: 440px
+        text-decoration: none
+        font-size: 30px
+        animation: aw1 2s ease-in-out infinite        
+        &:hover
+          cursor: pointer
+
+      .flecha3
+        width: fit-content
+        display: none
+        color: rgba(250,250,250,0.7)
+        top: -30px
+        left: 440px
+        text-decoration: none
+        font-size: 30px
+        animation: aw1 2s ease-in-out infinite        
+        &:hover
+          cursor: pointer
+
+      .flecha4
+        width: fit-content
+        display: none
+        color: rgba(250,250,250,0.7)
+        top: -19px
+        left: 350px
+        text-decoration: none
+        font-size: 30px
+        &:hover
+          cursor: pointer
+      span 
+        top: 3px
+        font-size: 20px
+
+      
+
+      @keyframes aw
+        0%
+          left: 350px
+
+        50%
+          left: 360px
+
+        100%
+          opacity: 350px
+
+      @keyframes aw1
+        0%
+          left: 440px
+
+        50%
+          left: 450px
+
+        100%
+          opacity: 440px
+
+
+    
+    .alerta8
+      border-radius: 2px
+      user-select: none
+      
+      display: none
+      top: 200px
+      left: 50%
+      transform: translate(-50%, 0)
+      position: absolute
+      height: 37px
+      -ms-flex-line-pack: center
+      align-content: center
+      z-index: 99999
+      width: 680px
+      text-align: center
+      -webkit-animation: alertas 11.75s infinite linear
+      animation: alertas 11.75s infinite linear
+      background: repeating-linear-gradient(-45deg, var(--color3) 0, var(--color3) 1em, transparent 1em, transparent 2em)
+      p
+        font-weight: bold
+        top: 2px
+        -ms-flex-item-align: end
+        align-self: flex-end
+        -webkit-transform-origin: center
+        -ms-transform-origin: center
+        transform-origin: center
+        line-height: 10px
+        padding: 0
+        font-size: 12px
+        display: inline
+        color: var(--gris2)
+        margin: 0
+        background-color: var(--color6)
+        span
+          font-size: 15px
+
+    .alerta0
+      border-radius: 2px
+      user-select: none
+      
+      display: none
+      top: 200px
+      left: 50%
+      transform: translate(-50%, 0)
+      position: absolute
+      height: 37px
+      -ms-flex-line-pack: center
+      align-content: center
+      z-index: 99999
+      width: 680px
+      text-align: center
+      -webkit-animation: alertas 11.75s infinite linear
+      animation: alertas 11.75s infinite linear
+      background: repeating-linear-gradient(-45deg, var(--color3) 0, var(--color3) 1em, transparent 1em, transparent 2em)
+      p
+        font-weight: bold
+        top: 2px
+        -ms-flex-item-align: end
+        align-self: flex-end
+        -webkit-transform-origin: center
+        -ms-transform-origin: center
+        transform-origin: center
+        line-height: 10px
+        padding: 0
+        font-size: 12px
+        display: inline
+        color: var(--gris2)
+        margin: 0
+        background-color: var(--color6)
+
+
+    .alert1
+      border-radius: 2px
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      display: none
+      top: 200px
+      left: 50%
+      -webkit-transform: translate(-50%, 0)
+      position: absolute
+      height: 51px
+      -ms-flex-line-pack: center
+      align-content: center
+      z-index: 99999
+      width: 680px
+      text-align: center
+      -webkit-animation: alertas 11.75s infinite linear
+      animation: alertas 11.75s infinite linear
+      background: repeating-linear-gradient(-45deg, var(--color4) 0, var(--color4) 1em, transparent 1em, transparent 2em)
+      opacity: 0.8
+      p
+        -ms-flex-item-align: end
+        align-self: flex-end
+        -webkit-transform-origin: center
+        -ms-transform-origin: center
+        transform-origin: center
+        line-height: 10px
+        padding: 0
+        top: -11px
+        font-size: 12px
+        display: inline
+        color: yellow
+        margin: 0
+        background-color: var(--color4)
+      .zzz
+        letter-spacing: 0.3px
+        font-weight: bold
+        color: white
+      .bch
+        letter-spacing: 0.3px
+        font-weight: bold
+        color: white
+        background-color: var(--color4)
+    .button
+      z-index: 20000
+      opacity: 0.5
+      position: absolute
+      z-index: 9999
+      width: 100vw
+      height: 100vh
+      -ms-flex-line-pack: center
+      align-content: center
+      text-align: center
+      left: 20px
+      top: -130px
+      background-color: transparent
+      padding: 10px
+      p
+        border: 5px solid hsl(0, 0%, 40%)
+        -ms-flex-item-align: end
+        align-self: flex-end
+        -webkit-transform-origin: center
+        -ms-transform-origin: center
+        transform-origin: center
+        top: -0px
+        color: var(--gris3)
+        font-weight: bold
+        margin: 0
+        width: 100px
+        height: 30px
+        border: 2px solid var(--gris3)
+        border-radius: 3px
+        -webkit-transition: 0.4s ease-in-out all
+        -o-transition: 0.4s ease-in-out all
+        transition: 0.4s ease-in-out all
+        span
+          user-select: none
+          top: 1px
+
+@-webkit-keyframes spynny
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  50%
+    -webkit-transform: rotate(180deg)
+    transform: rotate(180deg)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+
+@keyframes spynny
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  50%
+    -webkit-transform: rotate(180deg)
+    transform: rotate(180deg)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+
+@-webkit-keyframes stripes-move
+  100%
+    background-position: 300px 0px
+
+
+@keyframes stripes-move
+  100%
+    background-position: 300px 0px
+
+
+@-webkit-keyframes alertas
+  0%
+    background-position: 680px 0px
+
+
+@keyframes alertas
+  0%
+    background-position: 680px 0px
+
+.col-3.two
+  margin: 0
+  padding: 0
+  height: 100%
+
+.details
+  user-select: none
+  transition: 0.2s ease-in-out all
+  height: 52px
+  width: 400px
+  position: fixed
+  right: 3px
+  top: 265px
+  background-color: rgba(250,250,250,0.7)
+  border-radius: 2px
+  transform-origin: right
+  border: 1px solid var(--gris2)
+  opacity: 0.9
+  .select 
+    font-family: Tauri
+    font-size: 10px
+    color: white
+    text-align: center
+    vertical-align: middle
+
+  .ticket
+    transition: 0.2s ease-in-out all
+    position: absolute
+    width: 37px
+    height: 30px
+    background-color: transparent
+    border-radius: 2px
+    display: inline-block
+    margin: 3px
+    color: var(--gris2)
+
+    text-align: center
+    p  
+      transition: 0.2s ease-in-out all
+      font-weight: bold
+      top: 3px
+  .two
+    left: 39px  
+  .three
+    left: 78px 
+  .four
+    left: 117px 
+  .five
+    left: 156px 
+  .six
+    left: 195px 
+  .seven
+    left: 234px
+  .eight
+    left: 273px  
+
+
+  .pozo
+    width: 79px
+    height: 30px
+    background-color: var(--gris2)
+    border-radius: 2px
+    display: inline-block
+    right: 6.7px
+    position: fixed
+    margin-top: 3px
+    margin-bottom: 15px
+    text-align: center
+    #spanoferta
+      top: -2px
+      right: 5px
+      display: inline-block
+      color: white
+      letter-spacing: -2px
+      font-size: 25px
+      font-weight: bold
+      font-style: italic
+      border-radius: 2px
+      text-align: center
+      span
+        top: 0px
+        font-style: normal
+        left: 3px
+        bottom: 3px
+        font-size: 25px
+        color: var(--x-color)
+
+  .dtlsinfo
+    top: 35px
+    background-color: var(--gris3)
+    border-radius: 2px
+    position: absolute
+    bottom: 0
+    display: block
+    color: white
+    left: 3px
+    width: 392px
+    height: 13px
+    font-size: 10px
+    overflow: hidden
+    p
+      top: -0.5px
+      position: absolute
+      white-space: nowrap
+      animation: rightThenLeft 20s linear
+      animation-iteration-count: infinite
+
+@keyframes rightThenLeft
+    0%   
+      left: 180%
+    100%
+      left: -210%
+
+
+.thisis
+      top: 35px
+
+      border-radius: 2px
+      position: absolute
+      bottom: 0
+      display: block
+      color: white
+      left: 150px
+      width: 392px
+      height: 13px
+      font-size: 10px
+      overflow: hidden
+      p
+        top: -0.5px
+        position: absolute
+        white-space: nowrap
+        animation-iteration-count: infinite
+        opacity: 0
+        animation: tick 20s infinite
+
+
+@keyframes tick
+  0%
+    opacity: 0
+  10%
+    opacity: 1
+
+  20%
+    opacity: 0
+
+  100%
+    opacity: 0
+
+
+
+
+.left
+  float: right
+  left: 12px
+  width: 350px
+  height: 450px
+  top: 275px
+  user-select: none
+
+
+
+  .barra
+    top: 412px
+    input
+      font-family: Consolas, monospace
+      z-index: 10000
+      width: 400px
+      height: 25px
+      position: fixed
+      right: 3px
+      background-color: var(--gris1)
+      border: 1px solid var(--gris3)
+      border-radius: 2px
+      font-size: 10px
+      color: white
+      padding: 10px
+      &:focus
+        font-family: Consolas, monospace
+
+        font-size: 10px
+        color: white
+        box-shadow: 0 0 3px var(--gris0)
+
+  .transa
+    display: none
+    top: 720px
+    width: 400px
+    height: 105px
+    border-radius: 2px
+    background-color: none
+    position: fixed
+    opacity: 1
+
+
+    .ihash
+      z-index: 20000
+      width: 100%
+      height: 30px
+      background-color: transparent
+      position: absolute
+      border: none
+      &:hover
+        cursor: pointer
+
+    .hashtitle
+      width: 100%
+      height: 15px
+      font-weight: bold
+      font-size: 10px
+      text-align: center
+      background-color: rgba(250,250,250,0.7)
+      color: var(--gris2)
+      p
+        top: 2px
+    
+    .hashdata
+      display: block
+      width: 100%
+      height: 15px
+      font-size: 10px
+      font-family: Consolas, monospace
+      text-align: center
+      background-color: rgba(250,250,250,0.7)
+      color: var(--gris2)
+      font-weight: bold
+      p
+        top: -1px
+
+    
+
+
+    .iblock
+      z-index: 20000
+      width: 100%
+      height: 30px
+      background-color: transparent
+      position: absolute
+      border: none
+      &:hover
+        cursor: pointer
+    
+    .hashblocktittle
+      display: block
+      width: 100%
+      height: 15px
+      font-weight: bold
+      font-size: 10px
+      text-align: center
+      background-color: var(--gris4)
+      color: white
+      p
+        top: 2px
+
+    .blockhashdata
+      display: block
+      width: 100%
+      height: 15px
+      font-size: 10px
+      font-family: Consolas, monospace
+      text-align: center
+      background-color: var(--gris4)
+      color: white
+      font-weight: bold
+      p
+        top: -1px
+    
+
+
+    
+    .cuartafila
+
+      display: block
+      width: 100%
+      height: 15px
+      margin: 0
+      background-color: rgba(250,250,250,0.7)
+
+      .ticketa
+        top: -7px
+        font-family: Tauri
+        display: inline-block
+        width: 44px
+        height: 15px
+        background-color: var(--gris4)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+        font-weight: bold
+        p
+          top: 1px
+
+      .numbers
+        top: -6px
+        left: -5px
+        margin: 0
+        display: inline-block
+        width: 88px
+        height: 15px
+        background-color: rgba(250,250,250,0.7)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+
+
+
+      .amount
+
+        top: -7px
+        left: -10px
+        display: inline-block
+        width: 49px
+        height: 15px
+        background-color: var(--gris4)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+        font-weight: bold
+        p
+          top: 1px
+
+
+      .amountdata
+        top: -6px
+        left: -14px
+        display: inline-block
+        width: 88px
+        height: 15px
+        background-color: rgba(250,250,250,0.7)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+
+
+
+
+      .prize
+
+        top: -7px
+        left: -19px
+        display: inline-block
+        width: 44px
+        height: 15px
+        background-color: var(--gris4)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+        font-weight: bold
+        p
+          top: 1px
+
+      .prizenumbers
+        top: -30px
+        display: inline-block
+        left: 313px
+        width: 87px
+        height: 15px
+        background-color: rgba(250,250,250,0.7)
+        color: var(--gris2)
+        font-size: 10px
+        text-align: center
+
+    .istatus
+      z-index: 20000
+      width: 100%
+      height: 30px
+      background-color: transparent
+      position: absolute
+      border: none
+      &:hover
+        cursor: pointer
+
+
+    .status
+      display: block
+      width: 100%
+      height: 15px
+      background-color: var(--color3)
+      color: var(--gris2)
+      font-weight: bold
+      font-size: 10px
+      text-align: center
+      opacity: 0.9
+      p
+        top: 1px
+
+    .pago
+      display: block
+
+      font-family: Consolas, monospace
+      width: 100%
+      height: 15px
+      background-color: var(--color3)
+      color: var(--gris2)
+      font-weight: bold
+      font-size: 10px
+      text-align: center
+      opacity: 0.9
+      p 
+        top: -1px
+
+
+
+
+
+
+  .search
+
+    .tx
+      z-index: 10000
+      top: 408px
+      width: 400px
+      position: fixed
+      right: 3px
+      paddinng: 10px
+      border-radius: 2px
+      margin-top: -1px
+      margin-left: -1px
+      .tittle
+        border-radius: 2px
+        font-weight: bold
+        width: 100%
+        height: 20px
+        color: white
+        background-color: var(--gris4)
+        font-size: 10px
+        opacity: 0.8
+        p
+          top: 3px
+          text-align: center
+          vertical-align: middle
+
+      .tiones    
+        height: 253px
+        overflow: hidden 
+
+      .tion
+        z-index: 10000
+        transition: 0.2s linear all
+        background-color: var(--gris4)
+        font-family: Consolas, monospace
+        z-index: 10000
+        width: 400px
+        height: 20px
+        color: var(--gris1)
+        font-size: 9.5px
+        overflow: hidden
+        border: 1px solid transparent
+        border-radius: 2px
+        margin-top: 1px
+        margin-left: 0px
+        opacity: 0.6
+
+        
+        &:hover
+          cursor: pointer
+          opacity: 0.9
+          background-color: rgba(250,250,250,0.5)
+          .kun 
+            transition: 0.2s ease-in-out all
+            width: 7px
+          .pending 
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .wrong
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .pwrong
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .pwin
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .win
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .ptie
+            transition: 0.2s ease-in-out all
+            width: 7px
+          .tie
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          .lost
+            transition: 0.2s ease-in-out all
+            width: 7px 
+          p 
+            color: var(--gris2)
+            text-align: center
+            vertical-align: middle
+        .pending
+          background-color: rgba(250,250,250,0.9)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .wrong
+          background-color: var(--color4)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .pwrong
+          background-color: var(--color4)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .pwin
+          background-color: var(--color3)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .win
+          background-color: var(--color3)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .ptie
+          background-color: var(--color3)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .tie
+          background-color: var(--color3)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        .lost
+          background-color: var(--gris3)
+          transition: 0.2s ease-in-out all
+          display: inline-block
+          width: 0
+          height: 20px
+          right: 0
+        p
+          left: 15px
+          height: 100%
+          display: inline-block
+          font-weight: bold
+          top: 1px
+          text-align: center
+          vertical-align: middle
+
+      .flash
+        z-index: 10000
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #fff
+      .lastion
+        height: 0px
+
+
+
+
+
+
+
+
+  .totalb
+    position: fixed
+    top: 370px
+    right: 3px
+    display: inline-block
+    width: 198px
+    height: 30px
+    background-color: var(--gris4)
+    border-radius: 2px
+
+  .totalw
+    position: fixed
+    right: 205px
+    top: 370px
+    display: inline-block
+    width: 198px
+    height: 30px
+    background-color: var(--gris4)
+    border-radius: 2px
+  
+  .totalbets
+    top: 2px
+    text-align: center
+    transform-origin: 50% 50%
+    font-size: 8px
+    color: white
+    opacity: 0.8
+  
+  .cifra
+    font-weight: bold
+    text-align: center
+    transform-origin: 50% 50%
+    font-size: 12px
+    color: white
+    opacity: 0.8
+
+
+
+
+
+#qr
+  display: none
+  padding: 3px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  top: 30px
+  left: 7px
+  align: center
+  -webkit-transform-origin: bottom
+  -ms-transform-origin: bottom
+  transform-origin: bottom
+  -webkit-transform: rotateX(20deg)
+  transform: rotateX(20deg)
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+  margin: auto
+  width: 623px
+  background-color: var(--qr-back)
+
+#exit
+  top: -300px
+  left: 292px
+  display: none
+  -webkit-transform-origin: bottom
+  -ms-transform-origin: bottom
+  transform-origin: bottom
+  -webkit-transform: rotateX(16.5deg)
+  transform: rotateX(16.5deg)
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+  margin: auto
+  width: 20px
+  height: 50px
+  .switch
+    border-radius: 2px
+    font-size: 13px
+    letter-spacing: 3px
+    font-weight: bold
+    color: rgba(250,250,250,0.8)
+    -webkit-transform: translateZ(-5px)
+    transform: translateZ(-5px)
+    width: 100%
+    height: 250px
+    -webkit-transition: 0.2s ease-in-out all
+    -o-transition: 0.2s ease-in-out all
+    transition: 0.2s ease-in-out all
+    background-color: var(--gris4)
+    &:hover
+      -webkit-transform: translateZ(0)
+      transform: translateZ(0)
+      color: var(--blanco)
+      cursor: pointer
+  .p2
+    top: -250px
+    left: -564px
+    &:hover
+      color: var(--blanco)
+  .p3
+    top: -500px
+    left: -591px
+    &:hover
+      color: var(--blanco)
+
+.espan1
+  -webkit-user-select: none
+  -webkit-user-select--moz-user-select: none
+  -webkit-user-select--ms-user-select: none
+  -webkit-user-select-user-select: none
+  -webkit-transform-origin: 0 45%
+  -ms-transform-origin: 0 45%
+  transform-origin: 0 45%
+  -webkit-transform: rotate(90deg)
+  -ms-transform: rotate(90deg)
+  transform: rotate(90deg)
+  white-space: nowrap
+  display: block
+  position: absolute
+  left: 50%
+  bottom: 150px
+
+.espan2
+  -webkit-user-select: none
+  -webkit-user-select--moz-user-select: none
+  -webkit-user-select--ms-user-select: none
+  -webkit-user-select-user-select: none
+  -webkit-transform-origin: 0 50%
+  -ms-transform-origin: 0 50%
+  transform-origin: 0 50%
+  -webkit-transform: rotate(-90deg)
+  -ms-transform: rotate(-90deg)
+  transform: rotate(-90deg)
+  white-space: nowrap
+  display: block
+  position: absolute
+  left: 50%
+  bottom: 30px
+
+.row.mesa
+  user-select: none
+  width: 100%
+  z-index: 9999
+  top: -740px
+  .juego
+    -webkit-perspective: 375px
+    perspective: 375px
+    table.mesa
+      -webkit-transform-origin: bottom
+      -ms-transform-origin: bottom
+      transform-origin: bottom
+      -webkit-transform: rotateX(20deg)
+      transform: rotateX(20deg)
+      width: 700px
+      -webkit-transform-style: preserve-3d
+      transform-style: preserve-3d
+      border-spacing: 3px
+      margin: auto
+      border-collapse: separate
+      td
+        height: 80px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        padding: 0
+        margin: 0
+        color: var(--gris3)
+        font-weight: bold
+        font-size: 320%
+        text-align: center
+        -webkit-transform-origin: 50% 50%
+        -ms-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        background-color: rgba(250,250,250,0.5)
+        -webkit-transition: 0.2s ease-in-out all
+        -o-transition: 0.2s ease-in-out all
+        transition: 0.2s ease-in-out all
+        -webkit-transform: translateZ(-20px)
+        transform: translateZ(-20px)
+        opacity: 1
+
+
+        .bur
+          pointer-events: none
+          transition: 0.1s ease-in-out all
+          left: 15%
+          height: 70px
+          width: 70%
+          border-radius: 50%
+          background-color: rgba(250,250,250,0.10)
+
+        .bur2
+          transition: 0.1s ease-in-out all
+          pointer-events: none
+          left: 38%
+          height: 70px
+          width: 24%
+          border-radius: 50%
+          background-color: rgba(250,250,250,0.2)
+
+        .bur3
+          transition: 0.1s ease-in-out all
+          pointer-events: none
+          left: 15%
+          height: 70px
+          width: 70%
+          border-radius: 50%
+          background-color: rgba(250,250,250,0.2)
+
+      .cero
+        color: white
+        background-color: rgba(250,250,250,0.3)
+
+      .cero:hover
+        transform: translateZ(0)
+        color: white
+        background: var(--color6)
+        cursor: pointer
+        .bur2
+          background-color: rgba(250,250,250,0.3)
+
+      .cero.selected
+        transform: translateZ(0)
+        background-color: var(--color6)
+        .bur2
+          background-color: var(--color3)
+
+      .ocho
+        color: white
+        background-color: rgba(250,250,250,0.3)
+
+      .ocho:hover
+        transform: translateZ(0)
+        color: white
+        background: var(--color6)
+        cursor: pointer
+        .bur3
+          background-color: rgba(250,250,250,0.3)
+          
+      .ocho.selected
+        transform: translateZ(0)
+        background-color: var(--color6)
+        .bur3
+          background-color: var(--color3)
+
+      .nocolor:hover
+        transform: translateZ(0)
+        color: var(--gris3)
+        background: var(--color3)
+        cursor: pointer
+        .bur
+          background-color: rgba(250,250,250,0.3)
+
+      .nocolor.selected
+        transform: translateZ(0)
+        background-color: var(--color3)
+        .bur
+          background-color: var(--color3)
+
+      
+
+
+  
+      .mini
+        .p
+          top: -5px
+
+     
+    
+
+
+
+
+
+
+    th.bet
+      text-align: center
+      padding: 0
+      width: 25px
+      height: 0.5vh
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      background-color: rgba(250,250,250,0.25)
+      opacity: 0.5
+      &:hover
+        color: var(--gris2)
+
+        cursor: pointer
+
+        .selected
+          color: var(--gris2)
+  
+          opacity: 1
+        .deselected
+          opacity: 0.5
+          -webkit-transform: none !important
+          -ms-transform: none !important
+          transform: none !important
+    .black span
+      -webkit-transform-origin: 0 50%
+      -ms-transform-origin: 0 50%
+      transform-origin: 0 50%
+      -webkit-transform: rotate(-90deg)
+      -ms-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+      white-space: nowrap
+      display: block
+      position: absolute
+      bottom: 70px
+      left: 50%
+      color: var(--gris1)
+      opacity: 1
+    .red span
+      -webkit-transform-origin: 0 50%
+      -ms-transform-origin: 0 50%
+      transform-origin: 0 50%
+      -webkit-transform: rotate(-90deg)
+      -ms-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+      white-space: nowrap
+      display: block
+      position: absolute
+      bottom: 65px
+      left: 50%
+      color: var(--gris1)
+      opacity: 1
+    .rotate span
+      margin: auto
+      -webkit-transform-origin: 0 50%
+      -ms-transform-origin: 0 50%
+      transform-origin: 0 50%
+      -webkit-transform: rotate(-90deg)
+      -ms-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+      white-space: nowrap
+      display: block
+      position: absolute
+      left: 50%
+      bottom: 7px
+      color: var(--gris1)
+      opacity: 1
+    th.rotate
+      text-align: center
+      white-space: nowrap
+      vertical-align: middle
+      width: 1.5em
+    tr.bet
+      line-height: 20px
+      th.bet
+        color: var(--gris1)
+        opacity: 0.5
+
+    th.ran
+      background-color: rgba(250,250,250,0.25)
+      opacity: 0.5
+      text-align: center
+      &:hover
+        cursor: pointer
+        color: white

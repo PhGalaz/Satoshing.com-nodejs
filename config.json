@@ -1,0 +1,15 @@
+{
+    "database": {
+        "host": "",
+        "user": "",
+        "password": "",
+        "db": ""
+    },
+    "settings": {
+        "mnemonic": "",
+        "collecter": "",
+        "min_confs": 3,
+        "min_bet": 10000,
+        "max_bet": 1000000
+    }
+}
