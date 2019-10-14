@@ -1214,14 +1214,26 @@ h2 {
     background-color: var(--color4); }
 
 #twitter {
-  top: -45px; }
+  top: -44px; }
   #twitter i {
     position: absolute;
     right: 28px;
-    font-size: 20px;
-    color: var(--color3); }
+    font-size: 16px;
+    color: white; }
     #twitter i:hover {
       cursor: pointer; }
+
+#twittercircle {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: : 10;
+}
 
 #button.off {
   z-index: 98000;

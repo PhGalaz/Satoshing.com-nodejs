@@ -1917,9 +1917,21 @@ body {
     position: absolute;
     right: 20px;
     font-size: 25px;
-    color: #0096DC; }
+    color: white; }
     #twitter i:hover {
       cursor: pointer; }
+
+#twittercircle {
+  position: absolute;
+  bottom: 11px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: : 10;
+}
 
 .row.mesa {
   -webkit-transform: scale(0.6);

@@ -10,6 +10,6 @@
         "collecter": "",
         "min_confs": 3,
         "min_bet": 10000,
-        "max_bet": 1000000
+        "max_bet": 3000000
     }
 }

@@ -55,11 +55,20 @@ var negro = getComputedStyle(document.body).getPropertyValue('--negro');
 
 
 
+
+
+
+
 /********************************/
 /*                              */
 /*       Real Time Engine       */
 /*                              */
 /********************************/
+
+function sleep(millis) {
+  return new Promise(resolve => setTimeout(resolve, millis));
+}
+
 
 const socket = io();
 socket.emit("newview");
@@ -757,86 +766,7 @@ $(document).ready(function() {
 
 function if_number() {
     if (last['winner_'] == 0) {
-        document.body.style.setProperty('--color1', '#929292');
-        document.body.style.setProperty('--color2', '#C9C9C9');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', '#C5E148');
-        document.body.style.setProperty('--color6', '#DDE900');
-        document.body.style.setProperty('--color7', '#D1D2D2');
-        document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
-        document.body.style.setProperty('--color9', '#515240');
-
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
-        document.body.style.setProperty('--color16', '#999999');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
-
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
-
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
-
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-
-        $('.bch').css({
-            'color': ''
-        });
-        $('#winner').css({
-            'left': '22px',
-            'top': '8px'
-        });
-        $("#favicon").attr("href", "/favicon/favicon-01.png");
-    }
-    if (document.getElementById("winner1").innerHTML == 0) {
-        $('#winner1').css({
-            'left': '22px',
-            'top': '8px'
-        });
-    }
-    if (document.getElementById("winner2").innerHTML == 0) {
-        $('#winner2').css({
-            'left': '22px',
-            'top': '8px'
-        });
-    }
-
-
-    if (last['winner_'] == 1) {
-
-        document.body.style.setProperty('--color1', '#B3B000');
+      document.body.style.setProperty('--color1', '#B3B000');
         document.body.style.setProperty('--color2', '#CAC600');
         document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
         document.body.style.setProperty('--color4', '#FF7D46');
@@ -891,6 +821,89 @@ function if_number() {
             'filter': 'hue-rotate(0deg)'
         });
 
+        $('.bch').css({
+            'color': ''
+        });
+        $('#winner').css({
+            'left': '22px',
+            'top': '8px'
+        });
+        $("#favicon").attr("href", "/favicon/favicon-01.png");
+    }
+    if (document.getElementById("winner1").innerHTML == 0) {
+        $('#winner1').css({
+            'left': '22px',
+            'top': '8px'
+        });
+    }
+    if (document.getElementById("winner2").innerHTML == 0) {
+        $('#winner2').css({
+            'left': '22px',
+            'top': '8px'
+        });
+    }
+
+
+    if (last['winner_'] == 1) {
+
+      document.body.style.setProperty('--color1', 'rgb(255,247,140)');
+      document.body.style.setProperty('--color2', 'rgb(255,247,140)');
+      document.body.style.setProperty('--color3', 'rgb(255,247,140)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#f5ed87');
+      document.body.style.setProperty('--color6', '#f5ed87');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
+
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#afb09d');
+        document.body.style.setProperty('--color2', '#afb09d');
+      });
+      $('#container-12').css({
+          'filter': 'hue-rotate(0deg)'
+      });
+      $('#faqs').css({
+            'filter': 'hue-rotate(0deg)'
+        });
+        $('.row.mesa').css({
+            'filter': 'hue-rotate(0deg)'
+        });
+        $('#twitter').css({
+            'filter': 'hue-rotate(0deg)'
+        });
+        $('#cortina').css({
+            'filter': 'hue-rotate(0deg)'
+        });
+        $('.left').css({
+            'filter': 'hue-rotate(0deg)'
+        });
+
 
         $('.bch').css({
             'color': ''
@@ -920,41 +933,45 @@ function if_number() {
 
     if (last['winner_'] == 2) {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DAE500');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(236,255,140)');
+      document.body.style.setProperty('--color2', 'rgb(236,255,140)');
+      document.body.style.setProperty('--color3', 'rgb(236,255,140)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#d9eb81');
+      document.body.style.setProperty('--color6', '#d9eb81');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#a3b09d');
+        document.body.style.setProperty('--color2', '#a3b09d');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(28deg)'
         });
@@ -999,41 +1016,45 @@ function if_number() {
 
     if (last['winner_'] == 3) {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#CED900');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(222,255,140)');
+      document.body.style.setProperty('--color2', 'rgb(222,255,140)');
+      document.body.style.setProperty('--color3', 'rgb(222,255,140)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#d5f584');
+      document.body.style.setProperty('--color6', '#d5f584');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#9db0ad');
+        document.body.style.setProperty('--color2', '#9db0ad');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(85deg)'
         });
@@ -1079,7 +1100,340 @@ function if_number() {
 
     if (last['winner_'] == 4) {
 
-        document.body.style.setProperty('--color1', '#B3B000');
+      document.body.style.setProperty('--color1', 'rgb(187,255,138');
+      document.body.style.setProperty('--color2', 'rgb(187,255,138');
+      document.body.style.setProperty('--color3', 'rgb(187,255,138)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#b2f582');
+      document.body.style.setProperty('--color6', '#b2f582');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
+
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#929292');
+        document.body.style.setProperty('--color2', '#C9C9C9');
+      });
+        $('#container-12').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+        $('#faqs').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+        $('.row.mesa').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+        $('#twitter').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+        $('#cortina').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+        $('.left').css({
+            'filter': 'hue-rotate(104deg)'
+        });
+
+
+        $('.bch').css({
+            'color': ''
+        });
+
+
+        $('#winner').css({
+            'left': '21px',
+            'top': '7px'
+        });
+        $("#favicon").attr("href", "/favicon/favicon-05.png");
+    }
+    if (document.getElementById("winner1").innerHTML == 4) {
+        $('#winner1').css({
+            'left': '20px',
+            'top': '7px'
+        });
+    }
+    if (document.getElementById("winner2").innerHTML == 4) {
+        $('#winner2').css({
+            'left': '20px',
+            'top': '7px'
+        });
+    }
+
+
+    if (last['winner_'] == 5) {
+
+
+      document.body.style.setProperty('--color1', 'rgb(155,245,130)');
+      document.body.style.setProperty('--color2', 'rgb(155,245,130)');
+
+      document.body.style.setProperty('--color3', 'rgb(155,245,130)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#97f27e');
+      document.body.style.setProperty('--color6', '#97f27e');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
+
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#929292');
+        document.body.style.setProperty('--color2', '#C9C9C9');
+      });
+        $('#container-12').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+        $('#faqs').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+        $('.row.mesa').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+        $('#twitter').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+        $('#cortina').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+        $('.left').css({
+            'filter': 'hue-rotate(124deg)'
+        });
+
+        $('#winner').css({
+            'left': '23px',
+            'top': '8px'
+        });
+        $("#favicon").attr("href", "/favicon/favicon-06.png");
+    }
+    if (document.getElementById("winner1").innerHTML == 5) {
+        $('#winner1').css({
+            'left': '23px',
+            'top': '8px'
+        });
+    }
+    if (document.getElementById("winner2").innerHTML == 5) {
+        $('#winner2').css({
+            'left': '23px',
+            'top': '8px'
+        });
+    }
+
+
+    if (last['winner_'] == 6) {
+      document.body.style.setProperty('--color1', 'rgb(126,242,147)');
+      document.body.style.setProperty('--color2', 'rgb(126,242,147)');
+
+      document.body.style.setProperty('--color3', 'rgb(126,242,147)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#79ed8e');
+      document.body.style.setProperty('--color6', '#79ed8e');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
+
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#929292');
+        document.body.style.setProperty('--color2', '#C9C9C9');
+      });
+        $('#container-12').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+        $('#faqs').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+        $('.row.mesa').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+        $('#twitter').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+        $('#cortina').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+        $('.left').css({
+            'filter': 'hue-rotate(150deg)'
+        });
+
+
+        $('.bch').css({
+            'color': ''
+        });
+        $('#winner').css({
+            'left': '21px',
+            'top': '8px'
+        });
+        $("#favicon").attr("href", "/favicon/favicon-07.png");
+    }
+    if (document.getElementById("winner1").innerHTML == 6) {
+        $('#winner1').css({
+            'left': '21px',
+            'top': '8px'
+        });
+    }
+    if (document.getElementById("winner2").innerHTML == 6) {
+        $('#winner2').css({
+            'left': '21px',
+            'top': '8px'
+        });
+    }
+
+
+
+    if (last['winner_'] == 7) {
+      document.body.style.setProperty('--color1', 'rgb(121,237,175)');
+      document.body.style.setProperty('--color2', 'rgb(121,237,175)');
+
+      document.body.style.setProperty('--color3', 'rgb(121,237,175)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#74e3a8');
+      document.body.style.setProperty('--color6', '#74e3a8');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
+
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#929292');
+        document.body.style.setProperty('--color2', '#C9C9C9');
+      });
+        $('#container-12').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+        $('#faqs').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+        $('.row.mesa').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+        $('#twitter').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+        $('#cortina').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+        $('.left').css({
+            'filter': 'hue-rotate(170deg)'
+        });
+
+
+        $('.bch').css({
+            'color': ''
+        });
+        $("#favicon").attr("href", "/favicon/favicon-08.png");
+    }
+    if (document.getElementById("winner1").innerHTML == 7) {
+        $('#winner1').css({
+            'left': '23px',
+            'top': '8px'
+        });
+    }
+    if (document.getElementById("winner2").innerHTML == 7) {
+        $('#winner2').css({
+            'left': '23px',
+            'top': '8px'
+        });
+    }
+
+
+
+    if (last['winner_'] == 8) {
+      document.body.style.setProperty('--color1', '#B3B000');
         document.body.style.setProperty('--color2', '#CAC600');
         document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
         document.body.style.setProperty('--color4', '#FF7D46');
@@ -1137,319 +1491,6 @@ function if_number() {
         $('.bch').css({
             'color': ''
         });
-
-
-        $('#winner').css({
-            'left': '21px',
-            'top': '7px'
-        });
-        $("#favicon").attr("href", "/favicon/favicon-05.png");
-    }
-    if (document.getElementById("winner1").innerHTML == 4) {
-        $('#winner1').css({
-            'left': '20px',
-            'top': '7px'
-        });
-    }
-    if (document.getElementById("winner2").innerHTML == 4) {
-        $('#winner2').css({
-            'left': '20px',
-            'top': '7px'
-        });
-    }
-
-
-    if (last['winner_'] == 5) {
-
-
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DCE708');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
-
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
-
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
-
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
-
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(124deg)'
-        });
-
-        $('#winner').css({
-            'left': '23px',
-            'top': '8px'
-        });
-        $("#favicon").attr("href", "/favicon/favicon-06.png");
-    }
-    if (document.getElementById("winner1").innerHTML == 5) {
-        $('#winner1').css({
-            'left': '23px',
-            'top': '8px'
-        });
-    }
-    if (document.getElementById("winner2").innerHTML == 5) {
-        $('#winner2').css({
-            'left': '23px',
-            'top': '8px'
-        });
-    }
-
-
-    if (last['winner_'] == 6) {
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DCE708');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
-
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
-
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
-
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
-
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(150deg)'
-        });
-
-
-        $('.bch').css({
-            'color': ''
-        });
-        $('#winner').css({
-            'left': '21px',
-            'top': '8px'
-        });
-        $("#favicon").attr("href", "/favicon/favicon-07.png");
-    }
-    if (document.getElementById("winner1").innerHTML == 6) {
-        $('#winner1').css({
-            'left': '21px',
-            'top': '8px'
-        });
-    }
-    if (document.getElementById("winner2").innerHTML == 6) {
-        $('#winner2').css({
-            'left': '21px',
-            'top': '8px'
-        });
-    }
-
-
-
-    if (last['winner_'] == 7) {
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DCE708');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
-
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
-
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
-
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
-
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(170deg)'
-        });
-
-
-        $('.bch').css({
-            'color': ''
-        });
-        $("#favicon").attr("href", "/favicon/favicon-08.png");
-    }
-    if (document.getElementById("winner1").innerHTML == 7) {
-        $('#winner1').css({
-            'left': '23px',
-            'top': '8px'
-        });
-    }
-    if (document.getElementById("winner2").innerHTML == 7) {
-        $('#winner2').css({
-            'left': '23px',
-            'top': '8px'
-        });
-    }
-
-
-
-    if (last['winner_'] == 8) {
-        document.body.style.setProperty('--color1', '#929292');
-        document.body.style.setProperty('--color2', '#C9C9C9');
-        document.body.style.setProperty('--color3', '#59FECC');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', '#C5E148');
-        document.body.style.setProperty('--color6', '#55F6C5');
-        document.body.style.setProperty('--color7', '#D1D2D2');
-        document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
-        document.body.style.setProperty('--color9', '#515240');
-
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
-        document.body.style.setProperty('--color16', '#999999');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
-
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.2)');
-
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
-
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(0deg)'
-        });
-
-        $('.bch').css({
-            'color': ''
-        });
         $('#winner').css({
             'left': '22px',
             'top': '8px'
@@ -1472,41 +1513,46 @@ function if_number() {
 
     if (last['winner_'] == 9) {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DCE708');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(116,227,199)');
+      document.body.style.setProperty('--color2', 'rgb(116,227,199)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(116,227,199)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#6bdbbf');
+      document.body.style.setProperty('--color6', '#6bdbbf');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#b0a19d');
+        document.body.style.setProperty('--color2', '#b0a19d');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(190deg)'
         });
@@ -1550,41 +1596,47 @@ function if_number() {
 
 
     if (last['winner_'] == 'a') {
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', 'rgb(228, 240, 0)');
-        document.body.style.setProperty('--color4', '#FF7D46');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#DCE708');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(134,245,252)');
+      document.body.style.setProperty('--color2', 'rgb(134,245,252)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(134,245,252)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#82edf5');
+      document.body.style.setProperty('--color6', '#82edf5');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#929292');
+        document.body.style.setProperty('--color2', '#C9C9C9');
+      });
+
         $('#container-12').css({
             'filter': 'hue-rotate(210deg)'
         });
@@ -1631,59 +1683,46 @@ function if_number() {
 
     if (last['winner_'] == 'b') {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', '#F6FF44');
-        document.body.style.setProperty('--color4', '#18DDD6');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#F3FF11');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(255,209,231)');
+      document.body.style.setProperty('--color2', 'rgb(255,209,231)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(255,209,231)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#ffd1e7');
+      document.body.style.setProperty('--color6', '#ffd1e7');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(270deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(270deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(270deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(270deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(270deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(270deg)'
-        });
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#9dafb0');
+        document.body.style.setProperty('--color2', '#9dafb0');
+      });
 
         $('.bch').css({
             'color': ''
@@ -1711,59 +1750,47 @@ function if_number() {
 
     if (last['winner_'] == 'c') {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', '#F6FF44');
-        document.body.style.setProperty('--color4', '#18DDD6');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#F3FF11');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(255,219,226)');
+      document.body.style.setProperty('--color2', 'rgb(255,219,226)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(255,219,226)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#f5cbd3');
+      document.body.style.setProperty('--color6', '#f5cbd3');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'red');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
-        $('#container-12').css({
-            'filter': 'hue-rotate(290deg)'
-        });
-        $('#faqs').css({
-            'filter': 'hue-rotate(290deg)'
-        });
-        $('.row.mesa').css({
-            'filter': 'hue-rotate(290deg)'
-        });
-        $('#twitter').css({
-            'filter': 'hue-rotate(290deg)'
-        });
-        $('#cortina').css({
-            'filter': 'hue-rotate(290deg)'
-        });
-        $('.left').css({
-            'filter': 'hue-rotate(290deg)'
-        });
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#b09d9d');
+        document.body.style.setProperty('--color2', '#b09d9d');
+      });
+
 
         $('.bch').css({
             'color': ''
@@ -1789,41 +1816,46 @@ function if_number() {
 
 
     if (last['winner_'] == 'd') {
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', '#F6FF44');
-        document.body.style.setProperty('--color4', '#18DDD6');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#F3FF11');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(214,199,252)');
+      document.body.style.setProperty('--color2', 'rgb(214,199,252)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(214,199,252)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#cbbdf2');
+      document.body.style.setProperty('--color6', '#cbbdf2');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#9dadb0');
+        document.body.style.setProperty('--color2', '#9dadb0');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(310deg)'
         });
@@ -1868,41 +1900,46 @@ function if_number() {
 
     if (last['winner_'] == 'e') {
 
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', '#F6FF44');
-        document.body.style.setProperty('--color4', '#18DDD6');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#F3FF11');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(237,177,252)');
+      document.body.style.setProperty('--color2', 'rgb(237,177,252)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(237,177,252)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#e5a6f5');
+      document.body.style.setProperty('--color6', '#e5a6f5');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#b3a5c2');
+        document.body.style.setProperty('--color2', '#b3a5c2');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(330deg)'
         });
@@ -1946,41 +1983,46 @@ function if_number() {
 
 
     if (last['winner_'] == 'f') {
-        document.body.style.setProperty('--color1', '#B3B000');
-        document.body.style.setProperty('--color2', '#CAC600');
-        document.body.style.setProperty('--color3', '#F6FF44');
-        document.body.style.setProperty('--color4', '#18DDD6');
-        document.body.style.setProperty('--color5', 'rgb(208, 219, 0)');
-        document.body.style.setProperty('--color6', '#ECF800');
-        document.body.style.setProperty('--color7', '#E0DCA0');
-        document.body.style.setProperty('--color8', 'rgb(201, 198, 76)');
-        document.body.style.setProperty('--color9', '#515240');
+      document.body.style.setProperty('--color1', 'rgb(255,230,248)');
+      document.body.style.setProperty('--color2', 'rgb(255,230,248)');
 
-        document.body.style.setProperty('--color10', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
-        document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
-        document.body.style.setProperty('--color13', 'rgba(250,250,250,0.4)');
-        document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
-        document.body.style.setProperty('--color15', 'white');
-        document.body.style.setProperty('--color16', '#666');
-        document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
+      document.body.style.setProperty('--color3', 'rgb(255,230,248)');
+      document.body.style.setProperty('--color4', '#FF7D46');
+      document.body.style.setProperty('--color5', '#f7dff0');
+      document.body.style.setProperty('--color6', '#f7dff0');
+      document.body.style.setProperty('--color7', '#D1D2D2');
+      document.body.style.setProperty('--color8', 'rgb(200, 201, 201)');
+      document.body.style.setProperty('--color9', '#515240');
 
-        document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color10', 'rgba(250,250,250,0.3)');
+      document.body.style.setProperty('--color11', 'rgba(250,250,250,0.1)');
+      document.body.style.setProperty('--color12', 'rgba(250,250,250,0.2)');
+      document.body.style.setProperty('--color13', 'rgba(250,250,250,0.5)');
+      document.body.style.setProperty('--color14', 'rgba(250,250,250,0.25)');
+      document.body.style.setProperty('--color15', 'rgba(250,250,250,0.7)');
+      document.body.style.setProperty('--color16', '#999999');
+      document.body.style.setProperty('--color17', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--color18', 'rgba(250,250,250,0.15)');
 
-        document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
-        document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
-        document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
-        document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
-        document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+      document.body.style.setProperty('--color19', 'rgba(250,250,250,0.3)');
 
-        document.body.style.setProperty('--td-color', 'var(--gris3)');
-        document.body.style.setProperty('--neutro-color', '');
-        document.body.style.setProperty('--spinner-inner', 'var(--color3)');
-        document.body.style.setProperty('--x-color', 'var(--color3)');
-        document.body.style.setProperty('--address', 'var(--color3)');
-        document.body.style.setProperty('--qr-back', 'var(--color3)');
-        document.body.style.setProperty('--td-op', '');
+      document.body.style.setProperty('--gris0', 'rgba(50,53,26,1)');
+      document.body.style.setProperty('--gris1', 'rgba(50,53,26,0.8)');
+      document.body.style.setProperty('--gris2', 'rgba(50,53,26,0.5)');
+      document.body.style.setProperty('--gris3', 'rgba(50,53,26,0.4)');
+      document.body.style.setProperty('--gris4', 'rgba(50,53,26,0.1)');
+
+      document.body.style.setProperty('--td-color', 'var(--gris3)');
+      document.body.style.setProperty('--neutro-color', '');
+      document.body.style.setProperty('--spinner-inner', 'var(--color3)');
+      document.body.style.setProperty('--x-color', 'var(--color3)');
+      document.body.style.setProperty('--address', 'var(--color3)');
+      document.body.style.setProperty('--qr-back', 'var(--color3)');
+      document.body.style.setProperty('--td-op', '');
+      sleep(100).then(function() {
+        document.body.style.setProperty('--color1', '#c8bacc');
+        document.body.style.setProperty('--color2', '#c8bacc');
+      });
         $('#container-12').css({
             'filter': 'hue-rotate(345deg)'
         });

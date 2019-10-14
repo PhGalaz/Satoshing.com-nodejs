@@ -1149,10 +1149,22 @@ h2 {
   right: 0;
   position: fixed; }
   #twitter i {
-    font-size: 20px;
-    color: var(--color3); }
+    font-size: 17px;
+    color: white; }
     #twitter i:hover {
       cursor: pointer; }
+
+#twittercircle {
+  position: fixed;
+  bottom: 37px;
+  right: 9px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: : 10;
+}
 
 .barro {
   z-index: 111111;
